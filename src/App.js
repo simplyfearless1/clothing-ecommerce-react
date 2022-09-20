@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { useState, useEffect } from 'react';
+import Categories from './components/categories/categories';
 
-function App() {
+const App = () => {
+
+  const [categories, setCategories] = useState([])
+
+  let cats = [
+    {
+      "id": 1,
+      "title": "hats",
+      "img": "https://i.ibb.co/cvpntL1/hats.png"
+    },
+    {
+      "id": 2,
+      "title": "jackets",
+      "img": "https://i.ibb.co/px2tCc3/jackets.png"
+    },
+    {
+      "id": 3,
+      "title": "sneakers",
+      "img": "https://i.ibb.co/0jqHpnp/sneakers.png"
+    },
+    {
+      "id": 4,
+      "title": "womens",
+      "img": "https://i.ibb.co/GCCdy8t/womens.png"
+    },
+    {
+      "id": 5,
+      "title": "mens",
+      "img": "https://i.ibb.co/R70vBrQ/men.png"
+    }
+  ]
+
+  useEffect(() => {
+    setCategories(cats)
+  }, [])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Categories categories={ categories } />
     </div>
-  );
+  )
 }
 
 export default App;
