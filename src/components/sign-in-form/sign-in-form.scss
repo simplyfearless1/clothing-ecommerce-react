@@ -1,4 +1,4 @@
-.sign-up-form {
+.sign-in-form {
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -9,5 +9,11 @@
     
     p {
         margin-top: 0;
+    }
+
+    .btns-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
     }
 }
