@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "firebase": "^9.10.0",
     "react-router-dom": "^6.4.0",
     "sass": "^1.54.9"
   }
