@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { UserContext, UserProvider } from './contexts/user';
+import { UserProvider } from './contexts/user';
 
 import './index.scss';
 
