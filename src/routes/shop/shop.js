@@ -1,16 +1,17 @@
-import { useContext } from "react"
-import ProductsGrid from "../../components/products-grid/products-grid"
+import { Routes, Route } from "react-router-dom";
 
-import { ProductContext } from "../../contexts/products"
+import CategoriesPreview from "../categories-preview/categories-preview";
+import Category from "../category/category";
 
 import "./shop.scss";
 
 const Shop = () => {
 
-    const { products } = useContext(ProductContext)
-
     return (
-        <ProductsGrid products={products} />
+        <Routes>
+            <Route index element={<CategoriesPreview />} />
+            <Route path=':category' element={<Category />} />
+        </Routes>
     )
 }
 export default Shop
