@@ -18,13 +18,17 @@ const Category = () => {
     }, [category, categoriesMap])
 
     return(
-        <div className="category__wrap">
-            { products &&
-                products.map((product) => {
-                    return <ProductItem key={ product.id } product={ product } />
-                })
-            }
-        </div>
+        <Fragment>
+            <h2 className="category__title">{category}</h2>
+            <div className="category__wrap">
+                { products &&
+                    products.map((product) => {
+                        return <ProductItem key={ product.id } product={ product } />
+                    })
+                }
+            </div>
+        </Fragment>
+
     )
 }
 export default Category

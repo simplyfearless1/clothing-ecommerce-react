@@ -1,6 +1,6 @@
 import './home.scss';
 import { useState, useEffect } from 'react';
-import Categories from '../../components/categories/categories';
+import Directory from '../../components/directory/directory';
 
 const Home = () => {
 
@@ -41,7 +41,7 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <Categories categories={ categories } />
+      <Directory categories={ categories } />
     </div>
   )
 }

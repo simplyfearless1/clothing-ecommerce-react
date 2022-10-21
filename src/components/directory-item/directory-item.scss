@@ -1,4 +1,4 @@
-.category {
+.directory-item {
     min-width: 30%;
     height: 300px;
     flex: 1 1 auto;
@@ -11,11 +11,11 @@
 
     &:hover {
         cursor: pointer;
-        .category__bg {
+        .directory-item__bg {
             transform: scale(1.1);
             transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
         }
-        .category__content {
+        .directory-item__content {
             opacity: 0.9;
         }
     }
