@@ -33,6 +33,7 @@ const firebaseConfig = {
   };
   
 // Initialize Firebase
+// eslint-disable-next-line
 const firebaseApp = initializeApp(firebaseConfig);
 
 const provider = new GoogleAuthProvider()
@@ -56,7 +57,6 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
     })
 
     await batch.commit();
-    console.log('done');
 }
 
 export const getCategoriesAndDocuments = async () => {
@@ -80,11 +80,7 @@ export const createUserDocumentFromAuth =  async(
     // params are db instance, document and then collection
     const userDocRef = doc(db, 'users', userAuth.uid)
 
-    console.log(userDocRef)
-
     const userSnapshot = await getDoc(userDocRef);
-
-    console.log(userSnapshot.exists())
 
     if(!userSnapshot.exists()) {
         const { displayName, email } = userAuth;
