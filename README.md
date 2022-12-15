@@ -2,9 +2,10 @@
 
 - App bootstrapped with Create React App
 - Backend: Firebase
-- Integrations so far: Google, Firebase
-- Third party libs used: Firebase
+- Integrations so far: Google Sign In, Firebase
+- libs used: Firebase, Redux, Reselect, Redux Store, Redux Logger Middleware, React Router, Styled Components
+- styling: Styled Components
 
 ## To do still
 
-- Stripe payments, Redux, Apollo, Progressive Web App, Tests, Code & Performance optimization.
+- Stripe payments, Apollo, Progressive Web App, Tests
